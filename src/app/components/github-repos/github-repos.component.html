@@ -1,0 +1,9 @@
+<div class="repo__container">
+  <div *ngFor="let repo of gitHubRepos" class="repo__card">
+    <p class="repo__name">Name: {{ repo.name }}</p>
+    <p *ngIf="repo.description" class="repo__description">
+      Description: {{ repo.description }}
+    </p>
+    <a [href]="repo.html_url" class="repo__url"> Url: {{ repo.html_url }} </a>
+  </div>
+</div>

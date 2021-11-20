@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form">
+        <form (submit)="onSubmitForm()">
+          <i class="fas fa-search form__icon"></i>
+          <input
+            [(ngModel)]="gitHubUser"
+            name="userName"
+            type="search"
+            class="form__input"
+            placeholder="Search GitHub username..."
+          />
+          <input type="submit" value="search" class="form__btn" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="gitHubProfile" class="row">
+    <div class="col-sm-12">
+      <app-github-profile [gitHubProfile]="gitHubProfile"></app-github-profile>
+    </div>
+  </div>
+  <div *ngIf="gitHubProfile" class="row">
+    <div class="col-sm-12">
+      <app-github-repos [gitHubRepos]="gitHubRepos"></app-github-repos>
+    </div>
+  </div>
+</div>

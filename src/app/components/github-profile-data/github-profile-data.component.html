@@ -1,0 +1,44 @@
+<div class="data">
+  <div class="row">
+    <div class="data__username">
+      <p>{{ gitHubProfile.login }}</p>
+      <p>Joined {{ gitHubProfile.created_at | date }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <p *ngIf="gitHubProfile.bio; else noBio" class="data__bio">
+      {{ gitHubProfile.bio }}
+    </p>
+    <ng-template #noBio>
+      <p class="data__bio">This profile has no bio</p></ng-template
+    >
+  </div>
+  <div class="row">
+    <div class="data__card">
+      <div class="data__card--item">
+        <p class="data__label">Repos</p>
+        <p class="data__number">{{ gitHubProfile.public_repos }}</p>
+      </div>
+      <div class="data__card--item">
+        <p class="data__label">Followers</p>
+        <p class="data__number">{{ gitHubProfile.followers }}</p>
+      </div>
+      <div class="data__card--item">
+        <p class="data__label">Following</p>
+        <p class="data__number">{{ gitHubProfile.following }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="data__additional-info">
+      <div class="data__additional-info--item">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>{{ gitHubProfile.location }}</p>
+      </div>
+      <div *ngIf="gitHubProfile.blog" class="data__additional-info--item">
+        <i class="fas fa-link"></i>
+        <p>{{ gitHubProfile.blog }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+.data {
+  &__username {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bio {
+    color: #fff;
+    padding: 1.5rem 0.7rem;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    background-color: #141c2f;
+
+    &-- {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  &__number {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  &__additional-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0.7rem;
+
+    &--item {
+      display: flex;
+      align-items: center;
+      color: white;
+
+      i {
+        padding-right: 10px;
+      }
+    }
+  }
+}
