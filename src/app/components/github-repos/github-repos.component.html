@@ -4,6 +4,8 @@
     <p *ngIf="repo.description" class="repo__description">
       Description: {{ repo.description }}
     </p>
-    <a [href]="repo.html_url" class="repo__url"> Url: {{ repo.html_url }} </a>
+    <a [href]="repo.html_url" class="repo__url" target="_blank">
+      Url: {{ repo.html_url }}
+    </a>
   </div>
 </div>
