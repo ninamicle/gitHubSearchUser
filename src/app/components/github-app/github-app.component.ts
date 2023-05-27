@@ -21,9 +21,6 @@ export class GithubAppComponent implements OnInit {
   public onSubmitForm() {
     this.gitHubService.getProfile(this.gitHubUser).subscribe(
       (data) => {
-        console.log(data);
-        console.log(this.gitHubUser);
-
         this.gitHubProfile = data;
       },
       (error) => {
@@ -33,7 +30,6 @@ export class GithubAppComponent implements OnInit {
 
     this.gitHubService.getRepos(this.gitHubUser).subscribe(
       (data) => {
-        console.log(data);
         this.gitHubRepos = data;
       },
       (error) => {
